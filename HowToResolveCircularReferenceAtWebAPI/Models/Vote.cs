@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Newtonsoft.Json;
 
 namespace HowToResolveCircularReferenceAtWebAPI.Models
 {
@@ -11,6 +12,7 @@ namespace HowToResolveCircularReferenceAtWebAPI.Models
 
         public Guid ThemeId { get; set; }
 
+        [JsonIgnore]
         public Theme Theme { get; set; }
 
         public Vote(Theme theme)
